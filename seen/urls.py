@@ -1,7 +1,7 @@
 from django import views
 from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
-from seen.views import RegisterView, ContactCreateView, VerifyEmailView,LoginView,LogoutView,UserProfileView, index
+from seen.views import RegisterView, ContactCreateView, VerifyEmailView,LoginView,LogoutView,UserProfileView, index,send_sms_view
 
 
 
@@ -15,6 +15,7 @@ urlpatterns = [
    path("login/", LoginView.as_view(), name="login"),
    path("logout/", LogoutView.as_view(), name="logout"),
    path("profile/", UserProfileView.as_view(), name="profile"),
+   path('api/send_sms/', send_sms_view, name='send_sms'),
    path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
    path('api/Contact_us/', ContactCreateView.as_view(), name='Contact_us'),
 

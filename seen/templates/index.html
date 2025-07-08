@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Awareness Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        #warning-message {
+            display: none;
+            margin-top: 40px;
+            color: red;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bienvenue sur SedadSecurity Training Zones</h1>
+<p>Chargement de votre espace personnel...</p>
+
+<div id="warning-message">
+    ⚠️ Les banques ne demandent jamais votre code PIN ni le code OTP !
+</div>
+
+<script>
+    window.onload = function () {
+        alert("❌ Votre compte a été piraté ! Vous avez échoué au test.");
+        document.getElementById("warning-message").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
